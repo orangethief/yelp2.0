@@ -9,7 +9,7 @@ const router = createBrowserRouter(
   <Route path="/" element={<MainLayout />}>
     <Route index element={<HomePage />}/>
     <Route path="/all-restaurants" element={<AllRestaurantsPage  />}/>
-    <Route path="/restaurant/:id" element={<RestaurantDetailPage />}/>
+    <Route path="/restaurant/${restaurant.id}" element={<RestaurantDetailPage />}/>
   </Route>
 ));
 

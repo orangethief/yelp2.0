@@ -1,14 +1,14 @@
 
-/* import { Link } from 'react-router-dom' */
+/*import { Link } from 'react-router-dom' */
 
 import Restaurantlist from "../components/Restaurantlist"
 
 const AllRestaurantsPage = () => {
   return (
-    <div>
-      <Restaurantlist/>
+    <div>AllRestaurantsPage
+        <Restaurantlist/>
     </div>
-    
+    //here we will add the components for the All Restaurants page
   )
 }
 

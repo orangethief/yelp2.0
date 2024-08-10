@@ -1,11 +1,16 @@
 
 /* import { Link } from 'react-router-dom' */
 
+import Hero from "../components/Hero"
+import Searchbar from "../components/Searchbar" 
+
 const HomePage = () => {
   return (
-    <div>
-      <h1>Homepage</h1>
-    </div>
+    <>
+      <Hero/>
+      <Searchbar/>
+
+    </>
     //here we will add the components for the home page
   )
 }
