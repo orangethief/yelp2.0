@@ -26,18 +26,18 @@ const RestaurantDetail = () => {
     return (
         <>
         {restaurant && (
-            <div>
-            <h1>{restaurant.name}</h1>
-            <p>{restaurant.city}</p>
+            <div className="flex justify-center "><div className="p-6 m-5 w-full rounded-lg text-center bg-[#7CA280]">
+            <h1 className="text-2xl font-bold mb-2">{restaurant.name}</h1>
+            <p className="text-xl">{restaurant.city}</p>
             <div>
             {restaurant.comments.map((comment) => {
                 return (
                     <div key={comment.id}>
-                        <p>{comment.text}</p>
+                        <p className="text-xl">{comment.text}</p>
                     </div>
                 )
             })}
-            </div> 
+            </div> </div>
         </div>
         )}
         </>
