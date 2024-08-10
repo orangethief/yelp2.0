@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
 
 const RestaurantDetail = () => {
-    const { id } = useParams();
-    const [restaurant, setRestaurant] = useState([]);
+    const [restaurant, setRestaurant] = useState(null);
 
     useEffect(() => {
         let ignore = false;
@@ -12,7 +10,7 @@ const RestaurantDetail = () => {
                 const res = await fetch("/src/restaurants.json");
                 const data = await res.json();
                 if (!ignore) {
-                    setRestaurant(data.restaurants[1]);
+                    setRestaurant(data.restaurants[0]);
                 }
             } catch (error) {
                 console.log("Error fetching data", error)
@@ -26,10 +24,24 @@ const RestaurantDetail = () => {
     }, [])
 
     return (
-        <div>
+        <>
+        {restaurant && (
+            <div>
             <h1>{restaurant.name}</h1>
             <p>{restaurant.city}</p>
+            <div>
+            {restaurant.comments.map((comment) => {
+                return (
+                    <div key={comment.id}>
+                        <p>{comment.text}</p>
+                    </div>
+                )
+            })}
+            </div> 
         </div>
+        )}
+        </>
+        
     )
 }
 
