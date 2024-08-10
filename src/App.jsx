@@ -1,23 +1,23 @@
-import { useState } from 'react'
-import Restaurantlist from './components/Restaurantlist.jsx'
+import { Route, createBrowserRouter,createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import HomePage  from './pages/HomePage'
+import MainLayout from './layouts/MainLayout'
+import AllRestaurantsPage from './pages/AllRestaurantsPage'
+import RestaurantDetailPage from './pages/RestaurantDetailPage'
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path="/" element={<MainLayout />}>
+    <Route index element={<HomePage />}/>
+    <Route path="/all-restaurants" element={<AllRestaurantsPage  />}/>
+    <Route path="/restaurant/:id" element={<RestaurantDetailPage />}/>
+  </Route>
+));
 
-  const restaurantList = [{
-    name: "restaurant1",
-    city: "city1",
-    id: 1
-  }, {
-    name: "restaurant2",
-    city: "city2",
-    id: 2
-  }];
+const App =() => {
+  
 
-  return (
-    <>
-    <Restaurantlist restaurants={restaurantList}/>
-    </>
-  )
-}
+  return <RouterProvider router={router} />;
+  
+};
 
 export default App
