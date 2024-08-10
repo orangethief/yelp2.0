@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -38,3 +39,14 @@ const navItemStyle = {
 };
 
 export default Header;
+=======
+import React from 'react'
+
+const Header = () => {
+  return (
+    <div>Header</div>
+  )
+}
+
+export default Header
+>>>>>>> main
