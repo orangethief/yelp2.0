@@ -13,6 +13,7 @@ function Header() {
           <li style={navItemStyle}><Link to="/all-restaurants" style={linkStyle}>All Restaurants</Link></li>
         </ul>
       </nav>
+
     </header>
   );
 }
