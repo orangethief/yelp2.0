@@ -7,7 +7,7 @@ const RestaurantDetailPage = () => {
   return (
     <div>
         <h1>RestaurantDetailPage</h1>
-        <RestaurantDetailPage/>
+        <RestaurantItem/>
         </div>
     //here we will add the components for the restaurant detail page
   )
