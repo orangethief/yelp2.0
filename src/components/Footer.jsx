@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
+
 
 function Footer() {
   return (
@@ -10,7 +9,7 @@ function Footer() {
 }
 
 const footerStyle = {
-  backgroundColor: '#333',
+  backgroundColor: '#57886c',
   color: 'white',
   padding: '10px 0',
   textAlign: 'center',
@@ -20,14 +19,3 @@ const footerStyle = {
 };
 
 export default Footer;
-=======
-import React from 'react'
-
-const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
-
-export default Footer
->>>>>>> main
