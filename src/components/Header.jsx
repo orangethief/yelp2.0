@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { FaYelp } from "react-icons/fa";
 
@@ -13,6 +13,7 @@ function Header() {
           <li style={navItemStyle}><Link to="/all-restaurants" style={linkStyle}>All Restaurants</Link></li>
         </ul>
       </nav>
+
     </header>
   );
 }
