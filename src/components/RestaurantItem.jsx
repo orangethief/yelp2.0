@@ -10,7 +10,7 @@ const RestaurantItem = ({ restaurant }) => {
             <div id="restaurant-item" className="bg-gray-300">
                 <h1 className="text-center">{restaurant.name}</h1>
                 <p className="text-center">{restaurant.city}</p>
-                <button onClick={handleClick} className="bg-slate-700 text-white">See more</button>
+                <button className="bg-slate-700 text-white"><Link to={`/restaurant/${restaurant.id}`}>See More</Link></button>
             </div>
         </div>
     )
