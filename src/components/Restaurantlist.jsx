@@ -25,8 +25,9 @@ const Restaurantlist = () => {
     }, [])
 
     return (
-        <>
-        <section id='restaurants-container' className='grid grid-cols-3 gap-4'>
+        <> 
+        <section id='restaurants-container' className='grid grid-cols-3 gap-4 m-4'>
+            
             {restaurantList.map(restaurant => {
                 return <RestaurantItem key={restaurant.id} restaurant={restaurant}/>
             })}
